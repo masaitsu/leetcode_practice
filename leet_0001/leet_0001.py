@@ -6,6 +6,7 @@
 # Because nums[0] + nums[1] = 2 + 7 = 9,
 # return [0, 1].
 
+from typing import List
 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
@@ -14,4 +15,8 @@ class Solution:
             for b_ind in range(a_ind + 1, list_size):
                 if target == (nums[a_ind] + nums[b_ind]):
                     return [a_ind, b_ind]
-                    
+
+if __name__ == "__main__":
+    s = Solution()
+    print(s.twoSum([5, 7, 11, 15], 20))
+    
